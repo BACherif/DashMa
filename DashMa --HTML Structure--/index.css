@@ -1,0 +1,201 @@
+/*---------------------------------1ere partie (nav + footer + gestion default)---------------------------------*/
+*{
+	list-style: none;
+	text-decoration: none;
+}
+body{
+	margin: 0;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	background-color: gray;
+	position: relative;	
+}
+nav{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 100%;
+	position: sticky;
+	top: 0;
+	left: 0;
+	padding: 0;
+	background-color: white;
+	align-items: center;
+	z-index: 2;
+	background-color: white;
+	color: white;
+}
+nav img{
+	max-width: 100px;
+	height: auto;
+}
+#Logo{
+	float:left;
+}
+.centre{
+	display: flex;
+	justify-content: space-around;
+}
+.centre section{
+	width: 80%;
+}
+footer{
+	margin-top: 100px;
+	background-color: white;
+	text-align: center;
+}
+/*---------------------------------Fin 1ere partie---------------------------------*/
+
+/*---------------------------------2ere partie (texte centre+ carousel)---------------------------------*/
+.superContainer{
+	width: 100%;
+}
+
+.aligneL{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 1000px;
+	height: auto;
+	background-color: rgba(255, 255, 255, 0.9);
+	padding: 0;
+	margin-bottom: 15px;
+}
+
+#sect{
+	height: 850px;
+	width: inherit;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	background-image: url("./assets/noragami.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+}
+
+#sect div{
+	width: 70%;
+	height: auto;
+}
+
+#sect img{
+	width: 170px;
+	float: left;
+	margin: 15px;
+}
+
+#carouselle{
+	background-color: rgba(0, 0, 0, 0.5);
+	height: 100vh;
+	margin-bottom: 100px;
+}
+
+#sect1{
+	margin-top: 150px;
+	margin-bottom: 150px;
+	text-align: center;
+	align-self: center;
+}
+
+#sect1 h2{
+	border-bottom: solid 1px;
+	padding: 0;
+	display: inline-block;
+	color: white;
+	text-align: center;
+}
+
+#container{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	margin-top: 20px;
+}
+
+#container div{
+	background-image: url("./assets/solace.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	border: solid white 5px;
+}
+
+#container div:hover{
+	transition: 0.5s;
+	transform: scale(1.1);
+	border: solid 1px;
+	border-radius: 5px;
+	margin-left: 70px;
+	margin-right: 70px;
+}
+
+#container div p{
+	margin-top: 35%;
+	padding: 15px;
+	margin-bottom: 0;
+	background-color: rgba(355, 355, 355, 0.8);
+}
+.n2, .n2 p{
+	width: auto;
+	padding: 10px;
+}
+/*---------------------------------Fin 2e partie---------------------------------*/
+
+
+/*---------------------------------Les animations---------------------------------*/
+@keyframes SlideLeft{
+	0%{
+		opacity: 0;
+		transform: translateX(-10%);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0%);
+	}
+}
+
+@keyframes SlideRight{
+	0%{
+		opacity: 0;
+		transform: translateX(10%);
+	}
+	100%{
+		opacity: 1;
+		transform: translateX(0%);
+	}
+}
+
+@keyframes appear{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+.n2{
+	opacity: 0;
+}
+
+.popLeft{
+	opacity: 1;
+	animation-fill-mode: backwards;
+	animation-name: SlideLeft;
+	animation-duration: 1s;
+}
+
+.popRight{
+	opacity: 1;
+	animation-fill-mode: backwards;
+	animation-name: SlideRight;
+	animation-duration: 1s;
+}
+
+.pop{
+	animation-name: appear;
+	animation-duration: 1s;
+}
+/*---------------------------------Fin section Animation---------------------------------*/
