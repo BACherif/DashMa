@@ -1,0 +1,57 @@
+footer {
+    width: 100vw;
+    background: #050516;
+    padding: 3vh 10vw;
+    ;
+    border-top: solid 0.5rem #45E81A;
+}
+
+.main-content {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: space-around;
+    font-size: 1.6rem;
+    padding: 1rem;
+}
+
+.key {
+    display: flex;
+    flex-basis: 50%;
+    justify-content: space-between;
+    padding: 3rem 0 1rem 2rem;
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.481);
+    width: 50%;
+}
+
+.logo {
+    color: rgba(255, 255, 255, 0.692);
+    text-align: center;
+}
+
+.link {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.link a {
+    color: rgba(255, 255, 255, 0.692);
+    text-decoration: none;
+}
+
+#LinkUse .img {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.main-content .link {
+    padding: 1rem;
+    border-left: solid 3px #45E81A;
+}
+
+.main-content img {
+    height: 10rem;
+    width: 10rem;
+}

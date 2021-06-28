@@ -1,0 +1,117 @@
+.dropdown_menue {
+    top: 0;
+    z-index: 3;
+    width: 100vw;
+    height: 100vh;
+    position: sticky;
+    padding-top: 1rem;
+    background-color: #e8f5c8c1;
+    background-image: linear-gradient(to right bottom, rgba(0, 128, 0, 0.2), rgba(5, 255, 5, 0.2));
+    box-shadow: 0 0 1.6rem 0.5rem #9fa5d57c inset;
+    border-top: 0.2rem solid white;
+    font-size: 1.5rem;
+    display: flex;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.dropdown_card {
+    position: relative;
+    width: 80%;
+    height: 80%;
+}
+
+.dropdown_card:hover .dropdown_card_label,
+.dropdown_card:hover .dropdown_card_img {
+    transform: translateY(-1.5rem);
+}
+
+.dropdown_card_img {
+    transition: all 0.5s;
+    box-shadow: 0 0 1.2rem 0.2rem rgba(128, 128, 128, 0.6);
+    padding: 0.2rem;
+    margin-left: 60rem;
+    z-index: 1;
+    border-radius: 1.6rem;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+}
+
+.dropdown_card_img>div {
+    width: 47rem;
+    height: 43rem;
+    border-radius: 1.6rem;
+    overflow: hidden;
+}
+
+.dropdown_card_img>div>img {
+    width: 60rem;
+    height: auto;
+}
+
+.dropdown_card_label {
+    transition: all 0.25s;
+    box-shadow: 0 0 1.2rem 0.2rem rgba(128, 128, 128, 0.6);
+    background-color: rgb(255, 255, 255);
+    width: 95rem;
+    height: 50rem;
+    border-radius: 1.9rem;
+    padding: 2rem;
+    color: black;
+    position: absolute;
+    top: 3rem;
+    z-index: 0;
+    border: 0.1rem solid rgba(70, 70, 70, 0.686);
+}
+
+.dropdown_card_label>h2 {
+    margin-right: 35rem;
+    margin-top: 5rem;
+    font-size: 1.3rem;
+}
+
+.dropdown_card_label>h2>span {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.cancel {
+    position: absolute;
+    z-index: 2;
+    top: 1rem;
+    padding: 0.5rem;
+    padding-bottom: 0.3rem;
+    left: 103rem;
+    background-color: aliceblue;
+    border-radius: 10px;
+}
+
+.cancel>svg {
+    width: 2rem;
+    height: 2rem;
+}
+
+.cancel>svg .cls-1 {
+    fill: aliceblue;
+    stroke: #1f8299;
+    stroke-miterlimit: 10;
+    stroke-dashoffset: 50px;
+    stroke-dasharray: 1000px;
+}
+
+.cancel>svg:hover .cls-1 {
+    animation: animationEcriture 6s ease-in-out 0s 50;
+}
+
+@keyframes animationEcriture {
+    to {
+        stroke-dasharray: 1000px;
+    }
+
+    from {
+        stroke-dasharray: 0px;
+    }
+}

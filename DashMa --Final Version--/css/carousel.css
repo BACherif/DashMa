@@ -1,0 +1,181 @@
+.carousel {
+    height: 80vh;
+    padding-top: 1rem;
+    background-color: #e8f5c8c1;
+    background-image: linear-gradient(to right bottom, rgba(0, 128, 0, 0.2), rgba(5, 255, 5, 0.2));
+    box-shadow: 0 0 1.6rem 0.5rem #9fa5d57c inset;
+    border-top: 0.2rem solid white;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.control {
+    display: flex;
+    color: #1f8299;
+    font-weight: bold;
+}
+
+/**/
+.trumbale {
+    min-width: 20rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+}
+
+.trumbale>div {
+    transition: 0.5s;
+    padding: 0.5rem;
+    border-radius: 2rem;
+    border: 0.2rem solid #1f8299;
+    margin-bottom: 1.5rem;
+}
+
+.active {
+    background-color: #1f8299;
+}
+
+/**/
+
+.previus,
+.next {
+    transition: all 0.25s;
+    padding: 0.8rem 1.2rem;
+    min-width: 10rem;
+    background-color: white;
+    margin-top: 5rem;
+    border: 0.2rem solid rgba(128, 128, 128, 0.549);
+    border-radius: 5px;
+    box-shadow: 0 0 1rem rgba(128, 128, 128, 0.481);
+    cursor: pointer;
+}
+
+.previus:hover,
+.next:hover {
+    box-shadow: 0 0 1rem 0.2rem rgba(128, 128, 128, 0.282);
+    transform: translateY(-0.2rem);
+    padding: 0.8rem 1.9rem;
+}
+
+.previus:active,
+.next:active {
+    box-shadow: 0 0 1rem 0.2rem rgba(128, 128, 128, 0.282);
+    transform: translateY(0.3rem);
+    padding: 0.8rem 1.9rem;
+}
+
+
+.carousel_container {
+    position: relative;
+    width: 64%;
+    height: 66%;
+}
+
+.carousel_container:hover .carousel_label,
+.carousel_container:hover .carousel_img {
+    transform: translateY(-1.5rem);
+}
+
+.carousel_img {
+    transition: all 0.5s;
+    box-shadow: 0 0 1.2rem 0.2rem rgba(128, 128, 128, 0.6);
+    padding: 0.2rem;
+    margin-left: 45rem;
+    z-index: 1;
+    border-radius: 1.6rem;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+}
+
+.carousel_img>div {
+    width: 37rem;
+    height: 27rem;
+    border-radius: 1.6rem;
+    overflow: hidden;
+}
+
+.carousel_img>div>img {
+    width: 49rem;
+    height: auto;
+}
+
+.carousel_label {
+    transition: all 0.25s;
+    box-shadow: 0 0 1.2rem 0.2rem rgba(128, 128, 128, 0.6);
+    background-color: rgb(255, 255, 255);
+    width: 75rem;
+    height: 32rem;
+    border-radius: 1.9rem;
+    padding: 2rem;
+    color: black;
+    position: absolute;
+    top: 3rem;
+    z-index: 0;
+    border: 0.1rem solid rgba(70, 70, 70, 0.686);
+}
+
+.carousel_label>h2 {
+    margin-right: 30rem;
+    margin-top: 5rem;
+    font-size: 1.3rem;
+}
+
+.carousel_label>h2>span {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1.8rem;
+}
+
+.text-gris {
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #808080f1;
+}
+
+.animate1 {
+    animation-name: imgChange;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in-out;
+}
+
+.animate2 {
+    animation-name: inChange;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes imgChange {
+    60% {
+        width: 0px;
+        opacity: 0.5;
+    }
+}
+
+@keyframes inChange {
+    60% {
+        margin-left: 82rem;
+        opacity: 0.5;
+    }
+}
+
+.animate3 {
+    animation-name: infoChange;
+    animation-duration: 0.7s;
+    animation-timing-function: ease-in-out;
+}
+
+@keyframes infoChange {
+    60% {
+        height: 0px;
+        top: 35rem;
+        padding: 0px;
+        opacity: 0.5;
+        text-overflow: clip;
+        white-space: nowrap;
+        overflow: hidden;
+        color: transparent;
+    }
+}

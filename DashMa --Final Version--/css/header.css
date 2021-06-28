@@ -1,0 +1,84 @@
+.header {
+    height: 90vh;
+    padding: 25vh 15vw;
+    background-image:
+        linear-gradient(to right bottom, rgba(0, 128, 0, 0.2), rgba(5, 255, 5, 0.2)), url(../img/img.jpg);
+    /*  */
+    background-size: cover;
+    /*  */
+    background-position: center;
+    transition: all 0.8s;
+}
+
+
+.card {
+    position: relative;
+    animation: pop 1.5s ease-in-out;
+    animation-fill-mode: backwards;
+}
+
+.card:hover .card_img,
+.card:hover .card_label {
+    box-shadow: 0 0 1.2rem 0.4rem rgba(128, 128, 128, 0.8);
+    transform: translateX(3.5rem);
+}
+
+@keyframes pop {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.card_img {
+    transition: all 0.5s;
+    padding: 0.1rem;
+    z-index: 1;
+    border-radius: 1.6rem;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0 0 1.2rem 0.2rem rgba(128, 128, 128, 0.6);
+}
+
+.card_img>div {
+    width: 20rem;
+    height: 20rem;
+    border-radius: 1.6rem;
+    overflow: hidden;
+}
+
+.card_img>div>img {
+    width: 30rem;
+    height: auto;
+}
+
+.card_label {
+    transition: all 0.25s;
+    box-shadow: 0 0 1.2rem 0.2rem rgba(128, 128, 128, 0.6);
+    background-color: rgb(255, 255, 255);
+    width: 80rem;
+    height: 20rem;
+    border-radius: 1.9rem;
+    padding: 1.6rem;
+    color: black;
+    position: absolute;
+    top: 2rem;
+    left: 3rem;
+    z-index: 0;
+    border: 0.1rem solid rgba(70, 70, 70, 0.686);
+}
+
+.card_label>h2 {
+    margin-left: 20rem;
+    margin-top: 3rem;
+    font-size: 1.3rem;
+}
+
+.card_label>h2>span {
+    display: block;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
