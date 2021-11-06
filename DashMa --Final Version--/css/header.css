@@ -15,6 +15,7 @@
     position: relative;
     animation: pop 1.5s ease-in-out;
     animation-fill-mode: backwards;
+    margin-left: 7vw;
 }
 
 .card:hover .card_img,

@@ -1,5 +1,5 @@
 .carousel {
-    height: 80vh;
+    height: 70vh;
     padding-top: 1rem;
     background-color: #e8f5c8c1;
     background-image: linear-gradient(to right bottom, rgba(0, 128, 0, 0.2), rgba(5, 255, 5, 0.2));
@@ -72,6 +72,7 @@
     position: relative;
     width: 64%;
     height: 66%;
+    margin-left: 13vw;
 }
 
 .carousel_container:hover .carousel_label,

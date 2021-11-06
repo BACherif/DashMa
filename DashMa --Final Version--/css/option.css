@@ -2,12 +2,17 @@
     padding: 20vh 10vw;
     background-color: rgba(253, 245, 232, 0.481);
     border-top: 0.2rem solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
 
 .option_item {
     position: relative;
     width: 112rem;
     height: 33rem;
+    margin-left: 10vw;
     margin-bottom: 5rem;
     opacity: 0;
 }
